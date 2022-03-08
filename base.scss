@@ -1,0 +1,105 @@
+/*
+Theme Name: lifeluencer
+Author: lifeluencer
+Author URI: https://twitter.com/LIFEluencer
+Description: ライフルエンサーグループが制作したテーマです。
+Version: 1.0
+License:
+License URI:
+*/
+
+// base
+@charset "UTF-8";
+@import "ress";
+
+$main: #cf9ea2;
+$accent1: #ae616b;
+$accent2: #9e9c83;
+$accent3: #abb0b4;
+$base: #f4f5fa;
+$white: #e8e9ee;
+$black: #707070;
+$ribbon: #94525b;
+$tab: 520px; /* min-width */
+$pc: 960px; /* min-width */
+$font-family: "Zen Kaku Gothic New", sans-serif;
+$fontawesome: "Font Awesome 6 Free";
+
+html,
+html* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  font-family: $font-family;
+  letter-spacing: 1.8rem;
+  background-color: $base;
+  color: $black;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+li {
+  list-style-type: none;
+}
+
+// header
+
+header {
+  position: fixed;
+  width: 100%;
+  color: $base;
+  background-color: rgba($base, 0.2);
+  .area-header {
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      display: flex;
+      height: auto;
+      align-items: center;
+      img {
+        width: 127px;
+        object-fit: cover;
+      }
+    }
+    .btn-menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.5rem;
+      i {
+        padding-left: 1.2rem;
+      }
+    }
+  }
+}
+
+// main
+main {
+  background-color: $accent2;
+  .area-firstview {
+    width: 100%;
+    height: 732px;
+  }
+}
+
+// footer
+footer {
+  background-color: $black;
+  padding: 10px 20px;
+  color: $base;
+  .area-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .footer-list {
+      display: flex;
+      justify-items: center;
+      li {
+        padding-right: 1.8rem;
+      }
+    }
+  }
+}
