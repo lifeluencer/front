@@ -14,7 +14,9 @@ License URI:
 
 $main: #cf9ea2;
 $accent1: #ae616b;
+$accent1_thin: #e1dada;
 $accent2: #9e9c83;
+$accent2_thin: #dad9d5;
 $accent3: #abb0b4;
 $base: #f4f5fa;
 $white: #e8e9ee;
@@ -26,14 +28,13 @@ $font-family: "Zen Kaku Gothic New", sans-serif;
 $fontawesome: "Font Awesome 6 Free";
 
 html,
-html* {
+html * {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 18px;
   font-family: $font-family;
-  letter-spacing: 1.8rem;
-  background-color: $base;
   color: $black;
+  font-weight: 400;
 }
 a {
   display: block;
@@ -78,28 +79,66 @@ header {
 
 // main
 main {
-  background-color: $accent2;
   .area-firstview {
     width: 100%;
     height: 732px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    h2 {
+      padding: 20px;
+      position: relative;
+      bottom: 200px;
+      color: $white;
+      font-size: 20px;
+      font-weight: 200;
+    }
   }
+  article {
+    padding: 20px;
+  }
+  .area-suggest {
+    background: $accent1_thin;
+  }
+  .area-hottag {
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      p {
+        padding: 2px 5px;
+      }
+    }
+  }
+  .area-concept {
+    background: $accent2_thin;
+  }
+}
+
+// slick setting
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
 }
 
 // footer
 footer {
   background-color: $black;
   padding: 10px 20px;
-  color: $base;
   .area-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
     .footer-list {
       display: flex;
-      justify-items: center;
       li {
-        padding-right: 1.8rem;
+        padding-right: 1rem;
+        color: $white;
       }
+    }
+    p {
+      color: $white;
     }
   }
 }
